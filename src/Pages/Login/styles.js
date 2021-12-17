@@ -14,7 +14,7 @@ root:{
     justifyContent:'center',
     fontFamily:'Montserrat, sans-serif !important',
     alignItems:'center',
-    //  backgroundColor:' rgba(0, 126, 255, 0.025)',
+    
      overflowY:'hidden',
     
     
@@ -51,16 +51,16 @@ margin: {
     justifyContent:'center',
     alignItems:'center',
   },
-  icon:{
-    color: '#005FC0',
-    fontSize:'1rem',
-    marginRight:'1.5rem !important',
-  },
+//   icon:{
+//     color: '#005FC0',
+//     fontSize:'1rem',
+//     marginRight:'1.5rem !important',
+//   },
   inputing:{
       width:'100%',
       marginTop:'1rem',
       fontFamily:'Montserrat, sans-serif !important',
-    //   border:'none !important',
+    
       '&:focus':{     
         outline:'none',
         borderBottom: '1px solid rgba(0, 0, 0, 0.42)'

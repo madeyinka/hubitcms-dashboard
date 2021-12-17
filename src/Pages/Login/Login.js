@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useContext} from 'react'
+import React,{useState,useEffect} from 'react'
 import useStyles from './styles'
 import {Button} from '@material-ui/core'
 import {Link} from 'react-router-dom' 
@@ -7,24 +7,23 @@ import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import { useHistory } from 'react-router-dom'
-import appContext from '../../contexts/app-context'
-import hubitlogo from '../../assets/hubit.png' ;
-import {MdVisibilityOff} from 'react-icons/md';
-import {MdVisibility} from 'react-icons/md';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import hubitlogo from '../../assets/hubit.png' ;
+
+
+import { Icon } from '@iconify/react';
 
 
 
 
 const Login = () => {
-    // const {loginValues,setLogin} = useContext(appContext);
+    
     const [text, setText] = useState(true);
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    // const [loading, setLoading] = useState(false);
+    
     const [loading, setLoading] = useState(false);
 
   
@@ -68,9 +67,7 @@ const handleLogin = async (e) => {
         setShowError(true);
     }   
 }       
-// setTimeout(() => {
-//     setShowError(false);
-// }, 10000);
+
 setTimeout(() => {
   setLoading(false);
 }, 15000);

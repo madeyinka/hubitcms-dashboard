@@ -1,15 +1,15 @@
-import React,{useState,useEffect,useContext} from 'react'
+import React,{useState,useEffect} from 'react'
 import useStyles from './styles'
 import { Button} from '@material-ui/core'
-import {Link} from 'react-router-dom' 
+
 import { userUpdatePassword } from '../../services/PostService'
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
-import { useParams,useLocation, useHistory } from 'react-router'
+import { useLocation, useHistory } from 'react-router'
 import hubitlogo from '../../assets/hubit.png' ;
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 
 
 
@@ -52,7 +52,7 @@ const checkPassword = (pass1, pass2) => {
 }
 
 // function to collect key and identity from the link parameters using react-router-dom
-const {id} =  useParams();
+// const {id} =  useParams();
 const querry = new URLSearchParams(useLocation().search)
 const key = querry.get('key')
 const identity = querry.get('identity')
