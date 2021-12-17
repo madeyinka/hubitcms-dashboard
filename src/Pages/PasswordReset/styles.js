@@ -1,4 +1,4 @@
-import { makeStyles,alpha } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 
 
@@ -41,12 +41,12 @@ export default makeStyles((theme) => ({
         justifyContent:'center',
         alignItems:'center',
       },
-      icon:{
-        color: '#005FC0',
-        fontSize:'1.3rem',
-        marginRight:'1.5rem !important',
-        cursor:'pointer',
-      },
+    //   icon:{
+    //     color: '#005FC0',
+    //     fontSize:'1.3rem',
+    //     marginRight:'1.5rem !important',
+    //     cursor:'pointer',
+    //   },
       input:{
           width:'100%',
           marginTop:'1rem',
