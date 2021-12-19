@@ -11,3 +11,4 @@ export { default as User } from './User.png';
 export { default as leftArrowBtn } from './leftarrow.png';
 export { default as rightArrowBtn } from './rightarrow.png';
 export { default as Avatar } from './avatar.png';
+

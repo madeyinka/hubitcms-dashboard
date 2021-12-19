@@ -1,7 +1,11 @@
 import React from "react";
 
 /// React router dom
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+/// Style
+import "../css/style.css";
+import "../vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
+import { withResizeDetector } from "react-resize-detector";
 
 /// Css
 import "./index.css";
@@ -23,7 +27,8 @@ import Error503 from "./pages/Error503";
 import ForgotPassword from "./pages/ForgotPassword";
 
 import AllPublisher from "./pages/allpublisher/AllPublisher";
-import CreatePublisher from "./pages/CreatePublisher";
+
+import CreatePublisher from "./pages/createpublisher/CreatePublisher";
 
 const Dashboard = () => <h1>Dashboard</h1>;
 const AllPages = () => <h1>Pages/AllPages</h1>;
@@ -36,13 +41,21 @@ const EditPublisher = () => <h1>Publisher/EditPublisher</h1>;
 const Newsletter = () => <h1>Newsletter</h1>;
 const Settings = () => <h1>Settings</h1>;
 
-const Markup = () => {
+const Markup = ({ width }) => {
+  const body = document.querySelector("body");
+
+  width >= 1300
+    ? body.setAttribute("data-sidebar-style", "full")
+    : width <= 1299 && width >= 767
+    ? body.setAttribute("data-sidebar-style", "mini")
+    : body.setAttribute("data-sidebar-style", "overlay");
+
   const routes = [
     /// Deshborad
     // { url: "", component: Home },
     // { url: "companies", component: Companies },
     // { url: "analytics", component: Analytics },
-    { url: "", component: Dashboard },
+    { url: "dashboard", component: Dashboard },
     { url: "all-pages", component: AllPages },
     { url: "edit-pages", component: EditPages },
     { url: "create-pages", component: CreatePages },
@@ -67,27 +80,24 @@ const Markup = () => {
   ];
 
   return (
-    <Router basename="/dashboard">
-      <div id="main-wrapper" className="show">
-        <Nav />
-        <div className="content-body">
-          <div className="container-fluid">
-            <Switch>
-              {routes.map((data, i) => (
-                <Route
-                  key={i}
-                  exact
-                  path={`/${data.url}`}
-                  component={data.component}
-                />
-              ))}
-            </Switch>
-          </div>
+    <div id="main-wrapper" className="show mainBody">
+      <Nav />
+      <div className="content-body">
+        <div className="container-fluid">
+          <Switch>
+            {routes.map((data, i) => (
+              <Route
+                key={i}
+                exact
+                path={`/${data.url}`}
+                component={data.component}
+              />
+            ))}
+          </Switch>
         </div>
-        <Footer />
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 };
-
-export default Markup;
+export default withResizeDetector(Markup);

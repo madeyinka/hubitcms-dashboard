@@ -1,39 +1,24 @@
-import React from 'react'
-import './styles.css'
-import { BrowserRouter as Router, Switch, Route   } from 'react-router-dom';
-// import AppState from './contexts/AppState';
-// import PageError from './pages/Error/PageError';
-// import LandingPage from './pages/LandingPage/LandingPage';
+import React, { Fragment } from "react";
 
-import Apping from './Apping';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Daniel pages
+// import Login from "./Pages/Login/Login";
 
-import Login from './Pages/Login/Login';
-import ResetPassword from './Pages/PasswordReset/PasswordReset'
-import EmailSent from './Pages/PasswordReset/EmailSent'
-import NewPassword from './Pages/PasswordReset/NewPassword'
-import ResetSuccessful from './Pages/PasswordReset/ResetSuccessful';
-
+/// Components
+import Markup from "./jsx";
+import Login from "./jsx/pages/Login";
 
 const App = () => {
-
   return (
-    // <AppState>
-    <Router>
-              
-      <Switch>
-         {/* <Route exact path="/landing" component={LandingPage} /> */}
-         <Route exact path="/" component={Login} />
-         <Route exact path="/forget-password" component={ResetPassword} />
-         <Route exact path="/emailsent" component={EmailSent} />
-      <Route exact path="/update-password" component={NewPassword} />
-      <Route exact path="/reset-password-success" component={ResetSuccessful} />
-
-        <Route exact path="/dashboard" component={Apping} />
-      
-      </Switch>
+    <Fragment>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Markup />
+        </Switch>
       </Router>
-    // </AppState>
-  )
-}
+    </Fragment>
+  );
+};
 
-export default App
+export default App;

@@ -67,10 +67,10 @@
 @import url("./../icons/avasta/css/style.css");
 @import url("./../icons/flaticon/flaticon.css");
 @import url("./../icons/icomoon/icomoon.css");
-@import url(./../vendor/animate/animate.min.css);
-@import url(./../vendor/aos/css/aos.min.css);
-@import url(./../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
-@import url(./../vendor/metismenu/css/metisMenu.min.css);
+@import url("./../vendor/animate/animate.min.css");
+@import url("./../vendor/aos/css/aos.min.css");
+@import url("./../vendor/perfect-scrollbar/css/perfect-scrollbar.css");
+@import url("./../vendor/metismenu/css/metisMenu.min.css");
 .gradient_one {
   background-image: linear-gradient(to right, rgba(186, 1, 181, 0.85) 0%, rgba(103, 25, 255, 0.85) 100%); }
 
@@ -368,7 +368,8 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  -ms-overflow-style: scrollbar; }
+  /* -ms-overflow-style: scrollbar;*/
+ } 
 
 figure {
   margin: 0 0 1rem; }
@@ -8750,7 +8751,6 @@ body {
   @media only screen and (max-width: 1400px) {
     body {
       font-size: 0.875rem; } }
-
 p {
   line-height: 1.8; }
 
@@ -22897,6 +22897,7 @@ body .MuiInputBase-input {
   height: 56px;
   padding: 10px 20px; }
 
+
 .calendar__day--start,
 .calendar__day--end,
 .calendar__day--selected {
@@ -26719,7 +26720,8 @@ code {
 
 .table {
   color: strong;
-    color-color: #3e4954; }
+    color: #3e4954; }
+
   .table th {
     padding: 25px 30px;
     border-bottom: 1px solid rgba(215, 218, 227, 0.3);
