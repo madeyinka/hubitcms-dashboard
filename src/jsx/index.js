@@ -1,10 +1,12 @@
 import React from "react";
+
 /// React router dom
 import { Switch, Route } from "react-router-dom";
 /// Style
 import "../css/style.css";
 import "../vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
 import { withResizeDetector } from "react-resize-detector";
+
 /// Css
 import "./index.css";
 import "./chart.css";
@@ -15,7 +17,7 @@ import Footer from "./layouts/Footer";
 
 /// Pages
 import Registration from "./pages/Registration";
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 import LockScreen from "./pages/LockScreen";
 import Error400 from "./pages/Error400";
 import Error403 from "./pages/Error403";
@@ -25,6 +27,7 @@ import Error503 from "./pages/Error503";
 import ForgotPassword from "./pages/ForgotPassword";
 
 import AllPublisher from "./pages/allpublisher/AllPublisher";
+
 import CreatePublisher from "./pages/createpublisher/CreatePublisher";
 
 const Dashboard = () => <h1>Dashboard</h1>;
@@ -46,6 +49,7 @@ const Markup = ({ width }) => {
     : width <= 1299 && width >= 767
     ? body.setAttribute("data-sidebar-style", "mini")
     : body.setAttribute("data-sidebar-style", "overlay");
+
   const routes = [
     /// Deshborad
     // { url: "", component: Home },
@@ -65,7 +69,7 @@ const Markup = ({ width }) => {
 
     ///login
     { url: "page-lock-screen", component: LockScreen },
-    // { url: "page-login", component: Login },
+    { url: "page-login", component: Login },
     { url: "page-register", component: Registration },
     { url: "page-error-400", component: Error400 },
     { url: "page-error-403", component: Error403 },
@@ -96,5 +100,4 @@ const Markup = ({ width }) => {
     </div>
   );
 };
-
 export default withResizeDetector(Markup);

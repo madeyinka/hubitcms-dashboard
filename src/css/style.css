@@ -67,10 +67,10 @@
 @import url("./../icons/avasta/css/style.css");
 @import url("./../icons/flaticon/flaticon.css");
 @import url("./../icons/icomoon/icomoon.css");
-@import url(./../vendor/animate/animate.min.css);
-@import url(./../vendor/aos/css/aos.min.css);
-@import url(./../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
-@import url(./../vendor/metismenu/css/metisMenu.min.css);
+@import url("./../vendor/animate/animate.min.css");
+@import url("./../vendor/aos/css/aos.min.css");
+@import url("./../vendor/perfect-scrollbar/css/perfect-scrollbar.css");
+@import url("./../vendor/metismenu/css/metisMenu.min.css");
 .gradient_one {
   background-image: linear-gradient(to right, rgba(186, 1, 181, 0.85) 0%, rgba(103, 25, 255, 0.85) 100%); }
 
@@ -270,16 +270,6 @@ body {
   color: #7e7e7e;
   text-align: left;
   background-color: #F7FAFC; }
-  .mainBody {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #7e7e7e;
-    text-align: left;
-    background-color: #F7FAFC; }
-  
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -378,7 +368,8 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  -ms-overflow-style: scrollbar; }
+  /* -ms-overflow-style: scrollbar;*/
+ } 
 
 figure {
   margin: 0 0 1rem; }
@@ -8708,10 +8699,6 @@ a.text-dark:hover, a.text-dark:focus {
   body {
     min-width: 992px !important; }
 
-  .mainBody{
-    min-width: 992px !important;
-  }
-
   .container {
     min-width: 992px !important; }
 
@@ -8764,17 +8751,6 @@ body {
   @media only screen and (max-width: 1400px) {
     body {
       font-size: 0.875rem; } }
-
-  .mainBody {
-    overflow-x: hidden;
-    height: 100%;
-    position: relative;
-    max-width: 100%;
-    font-size: 1rem; }
-    @media only screen and (max-width: 1400px) {
-      .mainBody {
-        font-size: 0.875rem; } }
-
 p {
   line-height: 1.8; }
 
@@ -22921,12 +22897,6 @@ body .MuiInputBase-input {
   height: 56px;
   padding: 10px 20px; }
 
-  .mainBody .picker-input__text,
-  .mainBody .MuiInputBase-input {
-  box-sizing: border-box;
-  border: 1px solid #eee;
-  height: 56px;
-  padding: 10px 20px; }
 
 .calendar__day--start,
 .calendar__day--end,
@@ -26751,6 +26721,7 @@ code {
 .table {
   color: strong;
     color: #3e4954; }
+
   .table th {
     padding: 25px 30px;
     border-bottom: 1px solid rgba(215, 218, 227, 0.3);

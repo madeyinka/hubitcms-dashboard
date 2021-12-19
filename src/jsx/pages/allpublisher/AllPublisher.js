@@ -44,7 +44,6 @@ const Customerlist = () => {
                 id="customCheckBox66"
                 required=""
               />
-
               <label
                 className="custom-control-label"
                 htmlFor="customCheckBox66"
